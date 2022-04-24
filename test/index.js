@@ -37,69 +37,46 @@ const data = [{
 }]
 
 
-  const imageElement = document.querySelector('img')
-  const fnameElement = document.querySelector('.fname')
-  const lnameElement = document.querySelector('.lname')
-  const emailElement = document.querySelector('.email')
-
-  const imageElement2 = document.querySelector('#img2')
-  const fnameElement2 = document.querySelector('.fname2')
-  const lnameElement2 = document.querySelector('.lname2')
-  const emailElement2 = document.querySelector('.email2')
-
-  const imageElement3 = document.querySelector('#img3')
-  const fnameElement3 = document.querySelector('.fname3')
-  const lnameElement3 = document.querySelector('.lname3')
-  const emailElement3 = document.querySelector('.email3')
-
-  const imageElement4 = document.querySelector('#img4')
-  const fnameElement4 = document.querySelector('.fname4')
-  const lnameElement4 = document.querySelector('.lname4')
-  const emailElement4 = document.querySelector('.email4')
-
-  const imageElement5 = document.querySelector('#img5')
-  const fnameElement5 = document.querySelector('.fname5')
-  const lnameElement5 = document.querySelector('.lname5')
-  const emailElement5 = document.querySelector('.email5')
-
-  const imageElement6 = document.querySelector('#img6')
-  const fnameElement6 = document.querySelector('.fname6')
-  const lnameElement6 = document.querySelector('.lname6')
-  const emailElement6 = document.querySelector('.email6')
 
 
- 
+for (let i = 0; i < data.length; i++) {
+    let div1 = document.createElement('div');
+    div1.className="section"
+    document.body.appendChild(div1);
 
-        imageElement.src = data[0].avatar
-        fnameElement.innerText = 'First Name : ' + data[0].first_name
-        lnameElement.innerText = 'last Name : ' + data[0].last_name
-        emailElement.innerText = 'Email : ' + data[0].email
-        
-        imageElement2.src = data[1].avatar
-        fnameElement2.innerText = 'First Name : ' + data[1].first_name
-        lnameElement2.innerText = 'last Name : ' + data[1].last_name
-        emailElement2.innerText = 'Email : ' + data[1].email
+    let div2 = document.createElement('div');
+    div2.className="heading" 
+    div1.appendChild(div2);
 
-        imageElement3.src = data[2].avatar
-        fnameElement3.innerText = 'First Name : ' + data[2].first_name
-        lnameElement3.innerText = 'last Name : ' + data[2].last_name
-        emailElement3.innerText = 'Email : ' + data[2].email
+    let h3 = document.createElement('h3');
+    h3.setAttribute("id","titel")
+    h3.innerText ='User Card';
+    div2.appendChild(h3);
 
-        imageElement4.src = data[3].avatar
-        fnameElement4.innerText = 'First Name : ' + data[3].first_name
-        lnameElement4.innerText = 'last Name : ' + data[3].last_name
-        emailElement4.innerText = 'Email : ' + data[3].email
+    let div3 = document.createElement('div');
+    div3.className="container"
+    div1.appendChild(div3);
 
-        imageElement5.src = data[4].avatar
-        fnameElement5.innerText = 'First Name : ' + data[4].first_name
-        lnameElement5.innerText = 'last Name : ' + data[4].last_name
-        emailElement5.innerText = 'Email : ' + data[4].email
+    let img = document.createElement("img");
+    img.src = data[i].avatar;
+    div3.appendChild(img);
 
+    let h4_1 = document.createElement('h4');
+    h4_1.className="fname"
+    h4_1.innerText ='First Name : ' + data[i].first_name
+    div3.appendChild(h4_1);
 
-        imageElement6.src = data[5].avatar
-        fnameElement6.innerText = 'First Name : ' + data[5].first_name
-        lnameElement6.innerText = 'last Name : ' + data[5].last_name
-        emailElement6.innerText = 'Email : ' + data[5].email
+    let h4_2 = document.createElement('h4');
+    h4_2.className="lname"
+    h4_2.innerText = 'last Name : ' + data[i].last_name
+    div3.appendChild(h4_2);
+
+    let h4_3 = document.createElement('h4');
+    h4_3.className="email"
+    h4_3.innerText ='Email : ' + data[i].email
+    div3.appendChild(h4_3);
 
 
 
+    
+}
